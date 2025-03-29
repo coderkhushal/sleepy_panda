@@ -31,7 +31,7 @@ services:
       - '6831:6831/udp'
       - '6832:6832/udp'
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v2.53.0-rc.0
     ports:
       - '9090:9090'
     volumes:
