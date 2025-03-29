@@ -10,6 +10,8 @@ const promClient = require('prom-client');
 const app = express();
 const port = 8000;
 
+promClient.collectDefaultMetrics({ register, gcDurationBuckets: [0.001, 0.01, 0.1, 1, 2, 5] });
+
 // Prometheus Metrics
 const register = new promClient.Registry();
 const requestLatency = new promClient.Histogram({
