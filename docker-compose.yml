@@ -17,7 +17,7 @@ services:
   grafana:
     image: grafana/grafana:latest
     ports:
-      - '7100:3000'
+      - '7300:3000'
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
